@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {NavLink, withRouter} from 'react-router-dom';
 
-import IntlMessages from 'util/IntlMessages';
 import CustomScrollbars from 'util/CustomScrollbars';
 
 
@@ -91,15 +90,21 @@ class SidenavContent extends Component {
                         </NavLink>
                     </li>
                     <li className="menu no-arrow">
-                        <NavLink to="/app/members">
-                            <i className="zmdi zmdi-accounts zmdi-hc-fw"/>
-                            <span className="nav-text">Members</span>
-                        </NavLink>
-                    </li>
-                    <li className="menu no-arrow">
                         <NavLink to="/app/profile">
                             <i className="zmdi zmdi-account zmdi-hc-fw"/>
                             <span className="nav-text">Profile</span>
+                        </NavLink>
+                    </li>
+                    <li className="menu no-arrow">
+                        <NavLink to="/app/results">
+                            <i className="zmdi zmdi-account zmdi-hc-fw"/>
+                            <span className="nav-text">Search Results</span>
+                        </NavLink>
+                    </li>
+                    <li className="menu no-arrow">
+                        <NavLink to="/app/faq">
+                            <i className="zmdi zmdi-account zmdi-hc-fw"/>
+                            <span className="nav-text">FAQ</span>
                         </NavLink>
                     </li>
                 </ul>

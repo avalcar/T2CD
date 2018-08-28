@@ -2,6 +2,7 @@ import React from 'react';
 import ContainerHeader from 'components/ContainerHeader/index';
 import CardBox from 'components/CardBox';
 import Tabber from 'components/Uspm/Tabs/member/single/';
+import ComposeEmail from 'components/Uspm/ComposeEmail/';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 
@@ -41,23 +42,21 @@ class ProfilePage extends React.Component {
                                     </div>
                                 </li>
                             </div>
-                            <div className="col-lg-5"><div className="row">
-                                <div className="col-lg-4 mt-3">
+                            <div className="col-lg-5">
+                            <div className="row">
+                                <div className="col-lg-4 mt-3 mb-4">
                                     <Button variant="raised" color="default" className="jr-btn jr-btn-label left float-right w-100">
-                                        <i className="zmdi zmdi-phone-in-talk zmdi-hc-fw "/>
-                                        <span>Phone Call</span>
-                                    </Button>
-                                </div>    
-                                <div className="col-lg-4 mt-3">
-                                    <Button variant="raised" color="secondary" className="jr-btn jr-btn-label left float-right w-100">
-                                        <i className="zmdi zmdi-email zmdi-hc-fw "/>
-                                        <span>Send Email</span>
+                                        <i className="zmdi zmdi-comments zmdi-hc-fw "/>
+                                    <span>Chat</span>
                                     </Button>
                                 </div>
                                 <div className="col-lg-4 mt-3">
+                                    <ComposeEmail />
+                                </div>
+                                <div className="col-lg-4 mt-3 mb-4">
                                     <Button variant="raised" color="primary" className="jr-btn jr-btn-label left float-right w-100">
                                     <i className="zmdi zmdi-open-in-browser zmdi-hc-fw "/>
-                                    <span>T2 Member Portal</span>
+                                    <span>Portal</span>
                                     </Button>
                                 </div>
                             </div>
