@@ -2,6 +2,7 @@ import React from 'react';
 import ContainerHeader from 'components/ContainerHeader/index';
 import CardBox from 'components/CardBox';
 import ScrollableTabsButtonAuto from 'components/Uspm/ScrollableTabsButtonAuto';
+import SampleTable from "components/Uspm/ReactTable";
 
 
 class ProfilePage extends React.Component {
@@ -12,7 +13,7 @@ class ProfilePage extends React.Component {
                 <ContainerHeader match={this.props.match} title="Feeds"/>
                 <div className="row">
                 <CardBox styleName="col-lg-12">
-                    <ScrollableTabsButtonAuto />
+                    <SampleTable />
                 </CardBox>
             </div>
             </div>

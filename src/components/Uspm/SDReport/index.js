@@ -22,7 +22,6 @@ class SDReport extends React.Component {
             <FormControl className="col-md-6">
               <Select
                 value=""
-                onChange=""
                 name="age"
                 displayEmpty
               >
@@ -35,7 +34,6 @@ class SDReport extends React.Component {
             <FormControlLabel
               control={
                 <Checkbox
-                  onChange=""
                   value="checkedA"
                 />
               }

@@ -10,7 +10,7 @@ class ProfilePage extends React.Component {
             <div className="app-wrapper">
                 <ContainerHeader match={this.props.match} title="Test Container"/>
                 <div className="row">
-                    <CardBox styleName="col-lg-12">
+                    <CardBox heading='SD Report Form' styleName="col-lg-12">
                         <div className="row">
                             <div className="col-lg-12">
                                 <SDReport />

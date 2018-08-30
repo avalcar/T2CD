@@ -216,8 +216,6 @@ class IntegrationReactSelect extends React.Component {
                 <Input
                     fullWidth
                     inputComponent={SelectWrapped}
-                    floatingLabelText="Some floating label"
-                  floatingLabelFixed={true}
                     inputProps={{
                         classes,
                         value: multi,
