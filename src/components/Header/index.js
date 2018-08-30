@@ -21,6 +21,8 @@ import {switchLanguage, toggleCollapsedNav} from 'actions/Setting';
 import IntlMessages from 'util/IntlMessages';
 import Menu from 'components/TopNav/Menu';
 import UserInfoPopup from 'components/UserInfo/UserInfoPopup';
+import Badge from '@material-ui/core/Badge';
+
 
 class Header extends React.Component {
 
@@ -147,9 +149,11 @@ class Header extends React.Component {
                                     className="d-inline-block"
                                     tag="span"
                                     data-toggle="dropdown">
-                                    <IconButton className="icon-btn size-20 font-size-20">
-                                        <i className="zmdi zmdi-notifications-active icon-alert animated infinite wobble"/>
-                                    </IconButton>
+                                    <Badge badgeContent={12} color="secondary" style={{ padding:'0 5px' }} className="animated wobble">
+                                        <IconButton className="icon-btn size-20 font-size-20">
+                                            <i className="zmdi zmdi-notifications-active"/>
+                                        </IconButton>
+                                    </Badge>
                                 </DropdownToggle>
 
                                 <DropdownMenu right>
@@ -169,10 +173,11 @@ class Header extends React.Component {
                                     className="d-inline-block"
                                     tag="span"
                                     data-toggle="dropdown">
-
-                                    <IconButton className="icon-btn size-20 font-size-20">
-                                        <i className="zmdi zmdi-comment-alt-text icon-alert zmdi-hc-fw"/>
-                                    </IconButton>
+                                    <Badge badgeContent={99} color="secondary" style={{ padding:'0 5px' }} className="animated wobble">
+                                        <IconButton className="icon-btn size-20 font-size-20">
+                                            <i className="zmdi zmdi-comment-alt-text zmdi-hc-fw"/>
+                                        </IconButton>
+                                    </Badge>
                                 </DropdownToggle>
 
 

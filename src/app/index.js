@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import Header from 'components/Header/index';
 import Sidebar from 'containers/SideNav/index';
 import Footer from 'components/Footer';
-import Tour from '../components/Tour/index';
+//import Tour from '../components/Tour/index';
 import {
     ABOVE_THE_HEADER,
     BELOW_THE_HEADER,
@@ -33,7 +33,7 @@ class App extends React.Component {
         console.log(navigationStyle, horizontalNavPosition);
         return (
             <div className={`app-container ${drawerStyle}`}>
-                <Tour/>
+                {/*<Tour/>*/}
 
                 <Sidebar/>
                 <div className="app-main-container">
@@ -49,11 +49,11 @@ class App extends React.Component {
                     <main className="app-main-content-wrapper">
                         <div className="app-main-content">
                             <Switch>
-                                <Route path={`${match.url}/dashboard`} component={asyncComponent(() => import('./routes/Dashboard'))}/>
                                 <Route path={`${match.url}/profile`} component={asyncComponent(() => import('./routes/Profile'))}/>
                                 <Route path={`${match.url}/feeds`} component={asyncComponent(() => import('./routes/Feeds'))}/>
                                 <Route path={`${match.url}/results`} component={asyncComponent(() => import('./routes/SearchResults'))}/>
                                 <Route path={`${match.url}/faq`} component={asyncComponent(() => import('./routes/Faq'))}/>
+                                <Route path={`${match.url}/test`} component={asyncComponent(() => import('./routes/Test'))}/>
                                 <Route component={asyncComponent(() => import('components/Error404'))}/>
                             </Switch>
                         </div>

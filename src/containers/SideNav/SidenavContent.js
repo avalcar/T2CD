@@ -78,12 +78,6 @@ class SidenavContent extends Component {
             <CustomScrollbars className="scrollbar">
                 <ul className="nav-menu">
                     <li className="menu no-arrow">
-                        <NavLink to="/app/dashboard">
-                            <i className="zmdi zmdi-view-dashboard zmdi-hc-fw"/>
-                            <span className="nav-text">Dashboard</span>
-                        </NavLink>
-                    </li>
-                    <li className="menu no-arrow">
                         <NavLink to="/app/feeds">
                             <i className="zmdi zmdi-notifications-none zmdi-hc-fw"/>
                             <span className="nav-text">Feeds</span>
@@ -97,14 +91,20 @@ class SidenavContent extends Component {
                     </li>
                     <li className="menu no-arrow">
                         <NavLink to="/app/results">
-                            <i className="zmdi zmdi-account zmdi-hc-fw"/>
+                            <i className="zmdi zmdi-search zmdi-hc-fw"/>
                             <span className="nav-text">Search Results</span>
                         </NavLink>
                     </li>
                     <li className="menu no-arrow">
                         <NavLink to="/app/faq">
-                            <i className="zmdi zmdi-account zmdi-hc-fw"/>
+                            <i className="zmdi zmdi-help zmdi-hc-fw"/>
                             <span className="nav-text">FAQ</span>
+                        </NavLink>
+                    </li>
+                    <li className="menu no-arrow">
+                        <NavLink to="/app/test">
+                            <i className="zmdi zmdi-developer-board zmdi-hc-fw"/>
+                            <span className="nav-text">Test</span>
                         </NavLink>
                     </li>
                 </ul>

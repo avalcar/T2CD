@@ -41,7 +41,7 @@ class App extends Component {
             if (authUser === null) {
                 return ( <Redirect to={'/signin'}/> );
             } else if (initURL === '' || initURL === '/' || initURL === '/signin') {
-                return ( <Redirect to={'/app/dashboard'}/> );
+                return ( <Redirect to={'/app/feeds'}/> );
             } else {
                 return ( <Redirect to={initURL}/> );
             }

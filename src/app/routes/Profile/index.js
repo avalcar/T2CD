@@ -45,6 +45,12 @@ class ProfilePage extends React.Component {
                             <div className="col-lg-5">
                             <div className="row">
                                 <div className="col-lg-4 mt-3 mb-4">
+                                    <Button variant="raised" color="primary" className="jr-btn jr-btn-label left float-right w-100">
+                                        <i className="zmdi zmdi-phone zmdi-hc-fw "/>
+                                    <span>Call</span>
+                                    </Button>
+                                </div>
+                                <div className="col-lg-4 mt-3 mb-4">
                                     <Button variant="raised" color="default" className="jr-btn jr-btn-label left float-right w-100">
                                         <i className="zmdi zmdi-comments zmdi-hc-fw "/>
                                     <span>Chat</span>
@@ -52,12 +58,6 @@ class ProfilePage extends React.Component {
                                 </div>
                                 <div className="col-lg-4 mt-3">
                                     <ComposeEmail />
-                                </div>
-                                <div className="col-lg-4 mt-3 mb-4">
-                                    <Button variant="raised" color="primary" className="jr-btn jr-btn-label left float-right w-100">
-                                    <i className="zmdi zmdi-open-in-browser zmdi-hc-fw "/>
-                                    <span>Portal</span>
-                                    </Button>
                                 </div>
                             </div>
                             </div>

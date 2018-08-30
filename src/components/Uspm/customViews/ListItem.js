@@ -42,11 +42,6 @@ function ListItem({styleName, data}) {
                             <i class="zmdi zmdi-email"></i>
                         </IconButton>
                     </li>
-                    <li>
-                        <IconButton color="primary" aria-label="Delete">
-                            <i class="zmdi zmdi-open-in-browser zmdi-hc-fw"></i>
-                        </IconButton>
-                    </li>
                 </ul>
             </div>
 

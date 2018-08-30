@@ -9,6 +9,7 @@ import Timeline from 'components/Uspm/timeLine/routes/defaultWithIcon';
 import StackedAreaChart from 'components/Uspm/charts/area/Components/StackedAreaChart';
 import RecentActivities from 'components/dashboard/Common/RecentActivities/index';
 import {recentList} from 'components/dashboard/Common/RecentActivities/data';
+import Button from '@material-ui/core/Button';
 
 function TabContainer(props) {
     return (
@@ -65,7 +66,10 @@ class Tabber extends Component {
                 </TabContainer>}
                 {value === 1 &&
                 <TabContainer>
-                    Profile Form
+                    <Button variant="raised" color="primary" className="jr-btn jr-btn-label left w-100 col-md-2">
+                        <i className="zmdi zmdi-open-in-browser zmdi-hc-fw "/>
+                        <span>Portal</span>
+                    </Button>
                 </TabContainer>}
                 {value === 2 &&
                 <TabContainer>
