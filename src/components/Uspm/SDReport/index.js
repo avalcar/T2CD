@@ -1,16 +1,11 @@
 import React from 'react';
 import IntegrationReactSelect from 'components/Uspm/autoComplete/reactSelect';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import Radio from '@material-ui/core/Radio';
+import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
+import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-
-
-
-
-
 
 class SDReport extends React.Component {
 
@@ -19,18 +14,27 @@ class SDReport extends React.Component {
           <div>
           <form>
             <div style={{ paddingBottom:'30px' }}>
-            <FormControl className="col-md-6">
-              <Select
-                value=""
-                name="age"
-                displayEmpty
-              >
-                <MenuItem value={10}>Sent</MenuItem>
-                <MenuItem value={20}>Received</MenuItem>
-              </Select>
-              <FormHelperText>Contact Sent / Received</FormHelperText>
-            </FormControl>
-            <FormControl className="col-md-6">
+            <FormControlLabel
+              control={
+                <Radio
+                  value="a"
+                  name="radio-button-demo"
+                  aria-label="A"
+                />
+              }
+              label="Female"
+              labelPlacement="start"
+            />
+            <FormControlLabel
+              control={
+                <Radio
+                  value="b"
+                  name="radio-button-demo"
+                  aria-label="B"
+                />
+              }
+              label="Male"
+            />
             <FormControlLabel
               control={
                 <Checkbox
@@ -39,8 +43,6 @@ class SDReport extends React.Component {
               }
               label="Contact successful"
             />
-            </FormControl>
-
             </div>
             <div>
               <IntegrationReactSelect />
