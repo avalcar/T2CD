@@ -2,9 +2,9 @@ import React from 'react';
 import ContainerHeader from 'components/ContainerHeader/index';
 import CardBox from 'components/CardBox';
 import Tabber from 'components/Uspm/Tabs/member/single/';
-import ComposeEmail from 'components/Uspm/ComposeEmail/';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
+import SDReport from 'components/Uspm/SDReport'
 
 class ProfilePage extends React.Component {
 
@@ -15,7 +15,7 @@ class ProfilePage extends React.Component {
                 <div className="row">
                     <CardBox styleName="col-lg-12">
                         <div className="row">
-                            <div className="col-lg-7">
+                            <div className="col-lg-10">
                                 <li className="media media-list post-list">
                                     <div className="size-100 post-image mr-3">
                                         <div className="grid-thumb-equal rounded">
@@ -42,24 +42,8 @@ class ProfilePage extends React.Component {
                                     </div>
                                 </li>
                             </div>
-                            <div className="col-lg-5">
-                            <div className="row">
-                                <div className="col-lg-4 mt-3 mb-4">
-                                    <Button variant="raised" color="primary" className="jr-btn jr-btn-label left float-right w-100">
-                                        <i className="zmdi zmdi-phone zmdi-hc-fw "/>
-                                    <span>Call</span>
-                                    </Button>
-                                </div>
-                                <div className="col-lg-4 mt-3 mb-4">
-                                    <Button variant="raised" color="default" className="jr-btn jr-btn-label left float-right w-100">
-                                        <i className="zmdi zmdi-comments zmdi-hc-fw "/>
-                                    <span>Chat</span>
-                                    </Button>
-                                </div>
-                                <div className="col-lg-4 mt-3">
-                                    <ComposeEmail />
-                                </div>
-                            </div>
+                            <div className="col-lg-2">
+                                <SDReport />
                             </div>
                             <div className="col-lg-12">
                                 <Tabber />

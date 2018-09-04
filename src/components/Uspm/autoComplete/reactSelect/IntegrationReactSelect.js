@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -16,12 +16,16 @@ const suggestions = [
     {label: 'High Blood Pressure'},
     {label: 'Physical Activity'},
     {label: 'Diet'},
+    {label: 'Congrats'},
+    {label: 'Welcome'},
+    {label: 'Chill Out'},
+    {label: 'Alcohol Consuption'},
 ].map(suggestion => ({
     value: suggestion.label,
     label: suggestion.label,
 }));
 
-class Option extends React.Component {
+class Option extends Component {
     handleClick = event => {
         this.props.onSelect(this.props.option, event);
     };
