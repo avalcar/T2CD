@@ -3,10 +3,9 @@ import ContainerHeader from 'components/ContainerHeader/index';
 import CardBox from 'components/CardBox';
 import Tabber from 'components/Uspm/Tabs/member/single/';
 import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
 import SDReport from 'components/Uspm/SDReport'
 
-class ProfilePage extends React.Component {
+class Profile extends React.Component {
 
     render() {
         return (
@@ -56,4 +55,4 @@ class ProfilePage extends React.Component {
     }
 }
 
-export default ProfilePage;
+export default Profile;

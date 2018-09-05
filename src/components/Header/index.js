@@ -22,6 +22,7 @@ import IntlMessages from 'util/IntlMessages';
 import Menu from 'components/TopNav/Menu';
 import UserInfoPopup from 'components/UserInfo/UserInfoPopup';
 import Badge from '@material-ui/core/Badge';
+import UserMenu from 'components/Uspm/UserMenu';
 
 
 class Header extends React.Component {
@@ -114,7 +115,7 @@ class Header extends React.Component {
                                value={this.state.searchText}/>
                     {(navigationStyle === HORIZONTAL_NAVIGATION && horizontalNavPosition === INSIDE_THE_HEADER) &&
                     <Menu/>}
-
+                    
                     <ul className="header-notifications list-inline ml-auto">
                         <li className="d-inline-block d-lg-none list-inline-item">
                             <Dropdown
@@ -215,6 +216,8 @@ class Header extends React.Component {
                             </Dropdown>
                         </li>}
                     </ul>
+                    <div style={{marginLeft:20}}></div>
+                    <UserMenu />
                 </Toolbar>
             </AppBar>
         );

@@ -1,7 +1,7 @@
 import React from 'react';
 import ContainerHeader from 'components/ContainerHeader/index';
 
-class ProfilePage extends React.Component {
+class Members extends React.Component {
 
     render() {
         return (
@@ -12,4 +12,4 @@ class ProfilePage extends React.Component {
     }
 }
 
-export default ProfilePage;
+export default Members;

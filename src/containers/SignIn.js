@@ -87,57 +87,6 @@ class SignIn extends React.Component {
                                         }} variant="raised" color="primary">
                                             <IntlMessages id="appModule.signIn"/>
                                         </Button>
-
-                                        <Link to="/signup">
-                                            <IntlMessages id="signIn.signUp"/>
-                                        </Link>
-                                    </div>
-
-                                    <div className="app-social-block my-1 my-sm-3">
-                                        <IntlMessages
-                                            id="signIn.connectWith"/>
-                                        <ul className="social-link">
-                                            <li>
-                                                <IconButton className="icon"
-                                                            onClick={() => {
-                                                                this.props.showAuthLoader();
-                                                                this.props.userFacebookSignIn();
-                                                            }}>
-                                                    <i className="zmdi zmdi-facebook"/>
-                                                </IconButton>
-                                            </li>
-
-                                            <li>
-                                                <IconButton className="icon"
-                                                            onClick={() => {
-                                                                this.props.showAuthLoader();
-                                                                this.props.userTwitterSignIn();
-                                                            }}>
-                                                    <i className="zmdi zmdi-twitter"/>
-                                                </IconButton>
-                                            </li>
-
-                                            <li>
-                                                <IconButton className="icon"
-                                                            onClick={() => {
-                                                                this.props.showAuthLoader();
-                                                                this.props.userGoogleSignIn();
-
-                                                            }}>
-                                                    <i className="zmdi zmdi-google-plus"/>
-                                                </IconButton>
-                                            </li>
-
-                                            <li>
-                                                <IconButton className="icon"
-                                                            onClick={() => {
-                                                                this.props.showAuthLoader();
-                                                                this.props.userGithubSignIn();
-                                                            }}>
-                                                    <i className="zmdi zmdi-github"/>
-                                                </IconButton>
-                                            </li>
-                                        </ul>
                                     </div>
 
                                 </fieldset>

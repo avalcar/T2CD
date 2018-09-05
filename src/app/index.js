@@ -20,7 +20,7 @@ class App extends React.Component {
 
     render() {
         const {match, drawerType, navigationStyle, horizontalNavPosition} = this.props;
-        const drawerStyle = drawerType.includes(FIXED_DRAWER) ? 'fixed-drawer' : drawerType.includes(COLLAPSED_DRAWER) ? 'collapsible-drawer' : 'mini-drawer';
+        const drawerStyle = 'mini-drawer';
 
         //set default height and overflow for iOS mobile Safari 10+ support.
         if (isIOS && isMobile) {
@@ -38,7 +38,7 @@ class App extends React.Component {
                 <Sidebar/>
                 <div className="app-main-container">
                     <div
-                        className={`app-header ${navigationStyle === HORIZONTAL_NAVIGATION ? 'app-header-horizontal' : ''}`}>
+                        className='app-header-horizontal'>
                         {(navigationStyle === HORIZONTAL_NAVIGATION && horizontalNavPosition === ABOVE_THE_HEADER) &&
                         <TopNav styleName="app-top-header"/>}
                         <Header/>
@@ -54,6 +54,8 @@ class App extends React.Component {
                                 <Route path={`${match.url}/results`} component={asyncComponent(() => import('./routes/SearchResults'))}/>
                                 <Route path={`${match.url}/faq`} component={asyncComponent(() => import('./routes/Faq'))}/>
                                 <Route path={`${match.url}/test`} component={asyncComponent(() => import('./routes/Test'))}/>
+                                <Route path={`${match.url}/signin`} component={asyncComponent(() => import('containers/SignIn'))}/>
+                                <Route path={`${match.url}/signup`} component={asyncComponent(() => import('containers/SignUp'))}/>
                                 <Route component={asyncComponent(() => import('components/Error404'))}/>
                             </Switch>
                         </div>

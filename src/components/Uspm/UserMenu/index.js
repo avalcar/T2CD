@@ -23,12 +23,12 @@ class UserInfo extends React.Component {
     render() {
         return (
             <div className="user-profile d-flex flex-row align-items-center">
-            <div style={{ textAlign:'center', color:'greenyellow', width:60, height:44 }}>
-                <i class="zmdi zmdi-chart-donut zmdi-hc-3x"></i>
-                </div>
-                <div className="user-detail" style={{ paddingTop:10 }}>
-                    <h3>T2 Coach Dashboard</h3>
-                </div>
+                <Avatar
+                    alt='...'
+                    src='http://via.placeholder.com/150x150'
+                    className="user-avatar "
+                    onClick={this.handleClick}
+                />
                 <Menu className="user-info"
                       id="simple-menu"
                       anchorEl={this.state.anchorEl}
@@ -36,12 +36,16 @@ class UserInfo extends React.Component {
                       onClose={this.handleRequestClose}
                       PaperProps={{
                           style: {
-                              width: 120,
+                              width: 180,
                               paddingTop: 0,
-                              paddingBottom: 0
+                              paddingBottom: 0,
+                              marginTop:50
                           }
                       }}
                 >
+                    <MenuItem>
+                        User Name
+                    </MenuItem>
                     <MenuItem onClick={this.handleRequestClose}>
                         <i className="zmdi zmdi-account zmdi-hc-fw mr-2"/>
                         <IntlMessages id="popup.profile"/>

@@ -5,7 +5,7 @@ import ScrollableTabsButtonAuto from 'components/Uspm/ScrollableTabsButtonAuto';
 import SampleTable from "components/Uspm/ReactTable";
 
 
-class ProfilePage extends React.Component {
+class Feeds extends React.Component {
 
     render() {
         return (
@@ -21,4 +21,4 @@ class ProfilePage extends React.Component {
     }
 }
 
-export default ProfilePage;
+export default Feeds;

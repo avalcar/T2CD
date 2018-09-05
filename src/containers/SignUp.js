@@ -1,23 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import TextField from '@material-ui/core/TextField';
-import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {Link} from 'react-router-dom';
 import IntlMessages from 'util/IntlMessages';
+import green from '@material-ui/core/colors/green'
 import {
     hideMessage,
     showAuthLoader,
-    userFacebookSignIn,
-    userGithubSignIn,
-    userGoogleSignIn,
     userSignUp,
-    userTwitterSignIn
 } from 'actions/Auth';
 
-class SignUp extends React.Component {
+class SignUp extends Component {
     constructor() {
         super();
         this.state = {
@@ -49,11 +45,7 @@ class SignUp extends React.Component {
             <div
                 className="app-login-container d-flex justify-content-center align-items-center animated slideInUpTiny animation-duration-3">
                 <div className="app-login-main-content">
-                    <div className="app-logo-content d-flex align-items-center justify-content-center">
-                        <Link className="logo-lg" to="/" title="Jambo">
-                            <img src="http://via.placeholder.com/177x65" alt="jambo" title="jambo"/>
-                        </Link>
-                    </div>
+                    
 
                     <div className="app-login-content">
                         <div className="app-login-header">
@@ -101,62 +93,19 @@ class SignUp extends React.Component {
                                         this.props.showAuthLoader();
                                         this.props.userSignUp({email, password});
                                     }} color="primary">
-                                        <IntlMessages
-                                            id="appModule.regsiter"/>
+                                        Register
                                     </Button>
                                     <Link to="/signin">
                                         <IntlMessages id="signUp.alreadyMember"/>
                                     </Link>
                                 </div>
-                                <div className="app-social-block my-1 my-sm-3">
-                                    <IntlMessages
-                                        id="signIn.connectWith"/>
-                                    <ul className="social-link">
-                                        <li>
-                                            <IconButton className="icon"
-                                                        onClick={() => {
-                                                            this.props.showAuthLoader();
-                                                            this.props.userFacebookSignIn();
-                                                        }}>
-                                                <i className="zmdi zmdi-facebook"/>
-                                            </IconButton>
-                                        </li>
-
-                                        <li>
-                                            <IconButton className="icon"
-                                                        onClick={() => {
-                                                            this.props.showAuthLoader();
-                                                            this.props.userTwitterSignIn();
-                                                        }}>
-                                                <i className="zmdi zmdi-twitter"/>
-                                            </IconButton>
-                                        </li>
-
-                                        <li>
-                                            <IconButton className="icon"
-                                                        onClick={() => {
-                                                            this.props.showAuthLoader();
-                                                            this.props.userGoogleSignIn();
-
-                                                        }}>
-                                                <i className="zmdi zmdi-google-plus"/>
-                                            </IconButton>
-                                        </li>
-
-                                        <li>
-                                            <IconButton className="icon"
-                                                        onClick={() => {
-                                                            this.props.showAuthLoader();
-                                                            this.props.userGithubSignIn();
-                                                        }}>
-                                                <i className="zmdi zmdi-github"/>
-                                            </IconButton>
-                                        </li>
-                                    </ul>
-                                </div>
-
                             </form>
                         </div>
+                    </div>
+                    <div className="app-logo-content">
+                        <Link className="logo-lg" to="/" title="USPM">
+                            <img src="http://via.placeholder.com/177x65" alt="USPM" title="USPM"/>
+                        </Link>
                     </div>
 
                 </div>
@@ -183,8 +132,4 @@ export default connect(mapStateToProps, {
     userSignUp,
     hideMessage,
     showAuthLoader,
-    userFacebookSignIn,
-    userGoogleSignIn,
-    userGithubSignIn,
-    userTwitterSignIn
 })(SignUp);
